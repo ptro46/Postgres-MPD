@@ -98,7 +98,6 @@ Dans ce tableau il est possible de lister autant de "clusters" souhaité, un clu
 
 #### Entrée "hidden"
 
-
 ```
 	"hidden":[
 		{
@@ -115,6 +114,16 @@ Pour chaque table il va etre possible de masquer un ensemble de colonnes, pour c
 
 ## Utilisation
 
-Extract and draw tables relations graph from existing Postgres database 
+### Execution sur la configuration générant le modele contenant toutes les colonnes de chaque table
+
+`./postgres-mpd ./all manitou-all.config`
+
+### Execution sur la configuration générant le modele contenant uniquement les colonnes de type primary et foreign key de chaque table
+
+`./postgres-mpd only-pk-fk/ manitou-only-pkfk.config `
+
+### Résultats une fois l'exécution terminée
+
+![Exemple d'exécution](imgs/execution.png)
 
 Ok
