@@ -126,4 +126,10 @@ Pour chaque table il va etre possible de masquer un ensemble de colonnes, pour c
 
 ![Exemple d'exécution](imgs/execution.png)
 
-Ok
+## Exemple avec la base de Matitou
+
+Comme exemple les fichiers de configuration pour Manitou-Mail sont disponibles. [*http://www.manitou-mail.org*](http://www.manitou-mail.org)
+### PDF des tables avec toutes les colonnes
+![Toutes les colonnes](Example/Manitou/all/manitou-all.pdf)
+### PDF des tables avec uniquement les primary et foreign key
+![Uniquement les primary et foreign key](Example/Manitou/only-pk-fk/manitou-only-pkfk.pdf)
