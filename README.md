@@ -64,6 +64,14 @@ Vous pouvez nommer ce fichier comme vous voulez, le placer dans le répertoire c
 	}
 ```
 
+***outputName*** nom utilisé pour générer les fichiers (dot, pdf, ...)
+***dotOutputFormat*** format utilisé par la transformation graphviz/dot, [*https://www.graphviz.org/doc/info/output.html*](list des formats supportés)
+***dotBinary*** Chemin vers le binaire dot de Graphviz
+***includePrimaryKeys*** true pour inclure les primary key lors de la génération
+***includeForeignKeys*** true pour inclure les foreign key lors de la génération
+***includeDataColumns*** true pour inclure les colonnes autre que primary key ou foreign key lors de la génération
+
+
 #### Entrée "clusters"
 
 ```
