@@ -1,0 +1,49 @@
+Connected to manitou
+Describe tables
+16401::addresses  columns::11  addresses_pkey::PRIMARY KEY (addr_id)  foreignKeys::0
+16409::attachment_contents  columns::3  NoPrimaryKey  foreignKeys::1
+16415::attachments  columns::7  attachments_pkey::PRIMARY KEY (attachment_id)  foreignKeys::1
+16421::body  columns::3  NoPrimaryKey  foreignKeys::1
+16427::config  columns::4  NoPrimaryKey  foreignKeys::0
+16433::files  columns::2  NoPrimaryKey  foreignKeys::0
+16436::filter_action  columns::4  NoPrimaryKey  foreignKeys::1
+16442::filter_expr  columns::8  filter_expr_pkey::PRIMARY KEY (expr_id)  foreignKeys::0
+16450::filter_log  columns::3  NoPrimaryKey  foreignKeys::0
+16454::forward_addresses  columns::2  NoPrimaryKey  foreignKeys::0
+16460::global_notepad  columns::2  NoPrimaryKey  foreignKeys::0
+16466::header  columns::2  NoPrimaryKey  foreignKeys::1
+16474::identities  columns::5  identities_pkey::PRIMARY KEY (identity_id)  foreignKeys::0
+16481::import_mbox  columns::8  import_mbox_pkey::PRIMARY KEY (import_id)  foreignKeys::0
+16489::import_message  columns::5  NoPrimaryKey  foreignKeys::0
+16495::inverted_word_index  columns::4  NoPrimaryKey  foreignKeys::1
+16502::jobs_queue  columns::5  NoPrimaryKey  foreignKeys::0
+16510::mail  columns::17  NoPrimaryKey  foreignKeys::1
+16519::mail_addresses  columns::4  NoPrimaryKey  foreignKeys::2
+16522::mail_status  columns::2  NoPrimaryKey  foreignKeys::0
+16525::mail_tags  columns::4  NoPrimaryKey  foreignKeys::2
+16529::mail_template  columns::6  mail_template_pkey::PRIMARY KEY (template_id)  foreignKeys::0
+16538::mailing_data  columns::5  mailing_data_pkey::PRIMARY KEY (mailing_data_id)  foreignKeys::1
+16546::mailing_definition  columns::9  mailing_definition_pkey::PRIMARY KEY (mailing_id)  foreignKeys::0
+16555::mailing_run  columns::6  NoPrimaryKey  foreignKeys::1
+16558::mime_types  columns::2  NoPrimaryKey  foreignKeys::0
+16561::non_indexable_words  columns::1  NoPrimaryKey  foreignKeys::0
+16564::notes  columns::3  NoPrimaryKey  foreignKeys::1
+16571::programs  columns::3  NoPrimaryKey  foreignKeys::0
+16577::raw_mail  columns::2  NoPrimaryKey  foreignKeys::1
+16580::runtime_info  columns::2  NoPrimaryKey  foreignKeys::0
+16600::tags  columns::3  NoPrimaryKey  foreignKeys::1
+16603::tags_words  columns::3  NoPrimaryKey  foreignKeys::2
+16606::user_queries  columns::2  NoPrimaryKey  foreignKeys::0
+16612::users  columns::7  users_pkey::PRIMARY KEY (user_id)  foreignKeys::0
+16619::words  columns::2  words_pkey::PRIMARY KEY (word_id)  foreignKeys::0
+Build Hidden Skel
+Build Clusters
+    Build cluster Manitou
+        21 tables
+    Build cluster Technique
+        15 tables
+Generate Clusters and Tables DOT
+    Generate cluster Manitou
+    Generate cluster Technique
+    Generate relations 
+/usr/local/bin/dot -Tpdf -o./all/manitou-all.pdf ./all/manitou-all.dot

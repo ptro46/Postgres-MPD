@@ -1,0 +1,146 @@
+	"hidden":[
+		{
+			"tableName" : "addresses",
+			"columns" : ["addr_id","email_addr","name","nickname","last_sent_to","last_recv_from","notes","invalid","recv_pri","nb_sent_to","nb_recv_from"]
+		},
+		{
+			"tableName" : "attachment_contents",
+			"columns" : ["attachment_id","content","fingerprint"]
+		},
+		{
+			"tableName" : "attachments",
+			"columns" : ["attachment_id","mail_id","content_type","content_size","filename","charset","mime_content_id"]
+		},
+		{
+			"tableName" : "body",
+			"columns" : ["mail_id","bodytext","bodyhtml"]
+		},
+		{
+			"tableName" : "config",
+			"columns" : ["conf_key","value","conf_name","date_update"]
+		},
+		{
+			"tableName" : "files",
+			"columns" : ["mail_id","filename"]
+		},
+		{
+			"tableName" : "filter_action",
+			"columns" : ["expr_id","action_order","action_arg","action_type"]
+		},
+		{
+			"tableName" : "filter_expr",
+			"columns" : ["expr_id","name","user_lastmod","last_update","expression","direction","apply_order","last_hit"]
+		},
+		{
+			"tableName" : "filter_log",
+			"columns" : ["expr_id","mail_id","hit_date"]
+		},
+		{
+			"tableName" : "forward_addresses",
+			"columns" : ["to_email_addr","forward_to"]
+		},
+		{
+			"tableName" : "global_notepad",
+			"columns" : ["contents","last_modified"]
+		},
+		{
+			"tableName" : "header",
+			"columns" : ["mail_id","lines"]
+		},
+		{
+			"tableName" : "identities",
+			"columns" : ["identity_id","email_addr","username","xface","signature"]
+		},
+		{
+			"tableName" : "import_mbox",
+			"columns" : ["import_id","tag_id","mail_status","apply_filters","completion","status","filename","auto_purge"]
+		},
+		{
+			"tableName" : "import_message",
+			"columns" : ["import_id","mail_number","encoded_mail","status","mail_id"]
+		},
+		{
+			"tableName" : "inverted_word_index",
+			"columns" : ["word_id","part_no","mailvec","nz_offset"]
+		},
+		{
+			"tableName" : "jobs_queue",
+			"columns" : ["job_id","mail_id","job_type","job_args","status"]
+		},
+		{
+			"tableName" : "mail",
+			"columns" : ["mail_id","sender","recipients","sender_fullname","subject","msg_date","sender_date","identity_id","status","mod_user_id","thread_id","message_id","in_reply_to","date_processed","priority","flags","raw_size"]
+		},
+		{
+			"tableName" : "mail_addresses",
+			"columns" : ["mail_id","addr_id","addr_type","addr_pos"]
+		},
+		{
+			"tableName" : "mail_status",
+			"columns" : ["mail_id","status"]
+		},
+		{
+			"tableName" : "mail_tags",
+			"columns" : ["mail_id","tag","agent","date_insert"]
+		},
+		{
+			"tableName" : "mail_template",
+			"columns" : ["template_id","title","body_text","body_html","header","creation_date"]
+		},
+		{
+			"tableName" : "mailing_data",
+			"columns" : ["mailing_data_id","mailing_id","recipient_email","csv_data","sent"]
+		},
+		{
+			"tableName" : "mailing_definition",
+			"columns" : ["mailing_id","title","sender_email","creation_date","end_date","text_template","html_template","header_template","csv_columns"]
+		},
+		{
+			"tableName" : "mailing_run",
+			"columns" : ["mailing_id","status","throughput","nb_total","nb_sent","last_sent"]
+		},
+		{
+			"tableName" : "mime_types",
+			"columns" : ["suffix","mime_type"]
+		},
+		{
+			"tableName" : "non_indexable_words",
+			"columns" : ["wordtext"]
+		},
+		{
+			"tableName" : "notes",
+			"columns" : ["mail_id","note","last_changed"]
+		},
+		{
+			"tableName" : "programs",
+			"columns" : ["program_name","content_type","conf_name"]
+		},
+		{
+			"tableName" : "raw_mail",
+			"columns" : ["mail_id","mail_text"]
+		},
+		{
+			"tableName" : "runtime_info",
+			"columns" : ["rt_key","rt_value"]
+		},
+		{
+			"tableName" : "tags",
+			"columns" : ["tag_id","name","parent_id"]
+		},
+		{
+			"tableName" : "tags_words",
+			"columns" : ["tag_id","word_id","counter"]
+		},
+		{
+			"tableName" : "user_queries",
+			"columns" : ["title","sql_stmt"]
+		},
+		{
+			"tableName" : "users",
+			"columns" : ["user_id","fullname","login","email","custom_field1","custom_field2","custom_field3"]
+		},
+		{
+			"tableName" : "words",
+			"columns" : ["word_id","wordtext"]
+		},
+	]

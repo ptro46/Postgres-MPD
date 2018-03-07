@@ -1,0 +1,140 @@
+digraph "manitou" {
+  subgraph "cluster_Manitou" {
+    node [shape=plaintext];
+    label="Manitou";
+    style=filled;
+    color="bisque3";
+    "addresses" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">addresses</TD></TR><TR><TD align="left">addr_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">email_addr</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">name</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">nickname</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">last_sent_to</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">last_recv_from</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">notes</TD><TD align="right">text</TD></TR><TR><TD align="left">invalid</TD><TD align="right">integer</TD></TR><TR><TD align="left">recv_pri</TD><TD align="right">integer</TD></TR><TR><TD align="left">nb_sent_to</TD><TD align="right">integer</TD></TR><TR><TD align="left">nb_recv_from</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "attachment_contents" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">attachment_contents</TD></TR><TR><TD align="left">attachment_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">content</TD><TD align="right">oid</TD></TR><TR><TD align="left">fingerprint</TD><TD align="right">text</TD></TR></TABLE>>];
+    "attachments" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">attachments</TD></TR><TR><TD align="left">attachment_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">content_type</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">content_size</TD><TD align="right">integer</TD></TR><TR><TD align="left">filename</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">charset</TD><TD align="right">character varying(30)</TD></TR><TR><TD align="left">mime_content_id</TD><TD align="right">text</TD></TR></TABLE>>];
+    "body" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">body</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">bodytext</TD><TD align="right">text</TD></TR><TR><TD align="left">bodyhtml</TD><TD align="right">text</TD></TR></TABLE>>];
+    "filter_action" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">filter_action</TD></TR><TR><TD align="left">expr_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">action_order</TD><TD align="right">smallint</TD></TR><TR><TD align="left">action_arg</TD><TD align="right">text</TD></TR><TR><TD align="left">action_type</TD><TD align="right">character varying(100)</TD></TR></TABLE>>];
+    "filter_expr" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">filter_expr</TD></TR><TR><TD align="left">expr_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">name</TD><TD align="right">character varying(100)</TD></TR><TR><TD align="left">user_lastmod</TD><TD align="right">integer</TD></TR><TR><TD align="left">last_update</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">expression</TD><TD align="right">text</TD></TR><TR><TD align="left">direction</TD><TD align="right">character(1)</TD></TR><TR><TD align="left">apply_order</TD><TD align="right">real</TD></TR><TR><TD align="left">last_hit</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "header" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">header</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">lines</TD><TD align="right">text</TD></TR></TABLE>>];
+    "identities" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">identities</TD></TR><TR><TD align="left">identity_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">email_addr</TD><TD align="right">text</TD></TR><TR><TD align="left">username</TD><TD align="right">text</TD></TR><TR><TD align="left">xface</TD><TD align="right">text</TD></TR><TR><TD align="left">signature</TD><TD align="right">text</TD></TR></TABLE>>];
+    "import_mbox" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">import_mbox</TD></TR><TR><TD align="left">import_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">tag_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mail_status</TD><TD align="right">smallint</TD></TR><TR><TD align="left">apply_filters</TD><TD align="right">character(1)</TD></TR><TR><TD align="left">completion</TD><TD align="right">real</TD></TR><TR><TD align="left">status</TD><TD align="right">smallint</TD></TR><TR><TD align="left">filename</TD><TD align="right">text</TD></TR><TR><TD align="left">auto_purge</TD><TD align="right">character(1)</TD></TR></TABLE>>];
+    "inverted_word_index" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">inverted_word_index</TD></TR><TR><TD align="left">word_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">part_no</TD><TD align="right">integer</TD></TR><TR><TD align="left">mailvec</TD><TD align="right">bytea</TD></TR><TR><TD align="left">nz_offset</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "mail" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mail</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">sender</TD><TD align="right">text</TD></TR><TR><TD align="left">recipients</TD><TD align="right">text</TD></TR><TR><TD align="left">sender_fullname</TD><TD align="right">text</TD></TR><TR><TD align="left">subject</TD><TD align="right">text</TD></TR><TR><TD align="left">msg_date</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">sender_date</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">identity_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">status</TD><TD align="right">integer</TD></TR><TR><TD align="left">mod_user_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">thread_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">message_id</TD><TD align="right">text</TD></TR><TR><TD align="left">in_reply_to</TD><TD align="right">integer</TD></TR><TR><TD align="left">date_processed</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">priority</TD><TD align="right">integer</TD></TR><TR><TD align="left">flags</TD><TD align="right">integer</TD></TR><TR><TD align="left">raw_size</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "mail_addresses" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mail_addresses</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">addr_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">addr_type</TD><TD align="right">smallint</TD></TR><TR><TD align="left">addr_pos</TD><TD align="right">smallint</TD></TR></TABLE>>];
+    "mail_tags" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mail_tags</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">tag</TD><TD align="right">integer</TD></TR><TR><TD align="left">agent</TD><TD align="right">integer</TD></TR><TR><TD align="left">date_insert</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "mailing_data" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mailing_data</TD></TR><TR><TD align="left">mailing_data_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mailing_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">recipient_email</TD><TD align="right">text</TD></TR><TR><TD align="left">csv_data</TD><TD align="right">text</TD></TR><TR><TD align="left">sent</TD><TD align="right">character(1)</TD></TR></TABLE>>];
+    "mailing_definition" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mailing_definition</TD></TR><TR><TD align="left">mailing_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">title</TD><TD align="right">text</TD></TR><TR><TD align="left">sender_email</TD><TD align="right">text</TD></TR><TR><TD align="left">creation_date</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">end_date</TD><TD align="right">timestamp with time zone</TD></TR><TR><TD align="left">text_template</TD><TD align="right">text</TD></TR><TR><TD align="left">html_template</TD><TD align="right">text</TD></TR><TR><TD align="left">header_template</TD><TD align="right">text</TD></TR><TR><TD align="left">csv_columns</TD><TD align="right">text</TD></TR></TABLE>>];
+    "mailing_run" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mailing_run</TD></TR><TR><TD align="left">mailing_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">status</TD><TD align="right">smallint</TD></TR><TR><TD align="left">throughput</TD><TD align="right">double precision</TD></TR><TR><TD align="left">nb_total</TD><TD align="right">integer</TD></TR><TR><TD align="left">nb_sent</TD><TD align="right">integer</TD></TR><TR><TD align="left">last_sent</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "notes" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">notes</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">note</TD><TD align="right">text</TD></TR><TR><TD align="left">last_changed</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "raw_mail" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">raw_mail</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mail_text</TD><TD align="right">oid</TD></TR></TABLE>>];
+    "tags" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">tags</TD></TR><TR><TD align="left">tag_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">name</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">parent_id</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "tags_words" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">tags_words</TD></TR><TR><TD align="left">tag_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">word_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">counter</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "words" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">words</TD></TR><TR><TD align="left">word_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">wordtext</TD><TD align="right">character varying(50)</TD></TR></TABLE>>];
+  }
+  subgraph "cluster_Technique" {
+    node [shape=plaintext];
+    label="Technique";
+    style=filled;
+    color="cyan3";
+    "users" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">users</TD></TR><TR><TD align="left">user_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">fullname</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">login</TD><TD align="right">character varying(80)</TD></TR><TR><TD align="left">email</TD><TD align="right">text</TD></TR><TR><TD align="left">custom_field1</TD><TD align="right">text</TD></TR><TR><TD align="left">custom_field2</TD><TD align="right">text</TD></TR><TR><TD align="left">custom_field3</TD><TD align="right">text</TD></TR></TABLE>>];
+    "user_queries" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">user_queries</TD></TR><TR><TD align="left">title</TD><TD align="right">text</TD></TR><TR><TD align="left">sql_stmt</TD><TD align="right">text</TD></TR></TABLE>>];
+    "runtime_info" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">runtime_info</TD></TR><TR><TD align="left">rt_key</TD><TD align="right">character varying(100)</TD></TR><TR><TD align="left">rt_value</TD><TD align="right">text</TD></TR></TABLE>>];
+    "programs" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">programs</TD></TR><TR><TD align="left">program_name</TD><TD align="right">character varying(256)</TD></TR><TR><TD align="left">content_type</TD><TD align="right">character varying(256)</TD></TR><TR><TD align="left">conf_name</TD><TD align="right">character varying(100)</TD></TR></TABLE>>];
+    "non_indexable_words" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">non_indexable_words</TD></TR><TR><TD align="left">wordtext</TD><TD align="right">character varying(50)</TD></TR></TABLE>>];
+    "mime_types" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mime_types</TD></TR><TR><TD align="left">suffix</TD><TD align="right">character varying(20)</TD></TR><TR><TD align="left">mime_type</TD><TD align="right">character varying(100)</TD></TR></TABLE>>];
+    "mail_template" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mail_template</TD></TR><TR><TD align="left">template_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">title</TD><TD align="right">text</TD></TR><TR><TD align="left">body_text</TD><TD align="right">text</TD></TR><TR><TD align="left">body_html</TD><TD align="right">text</TD></TR><TR><TD align="left">header</TD><TD align="right">text</TD></TR><TR><TD align="left">creation_date</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "mail_status" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">mail_status</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">status</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "jobs_queue" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">jobs_queue</TD></TR><TR><TD align="left">job_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">job_type</TD><TD align="right">character varying(100)</TD></TR><TR><TD align="left">job_args</TD><TD align="right">text</TD></TR><TR><TD align="left">status</TD><TD align="right">smallint</TD></TR></TABLE>>];
+    "import_message" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">import_message</TD></TR><TR><TD align="left">import_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mail_number</TD><TD align="right">integer</TD></TR><TR><TD align="left">encoded_mail</TD><TD align="right">bytea</TD></TR><TR><TD align="left">status</TD><TD align="right">smallint</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR></TABLE>>];
+    "global_notepad" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">global_notepad</TD></TR><TR><TD align="left">contents</TD><TD align="right">text</TD></TR><TR><TD align="left">last_modified</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "forward_addresses" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">forward_addresses</TD></TR><TR><TD align="left">to_email_addr</TD><TD align="right">character varying(300)</TD></TR><TR><TD align="left">forward_to</TD><TD align="right">text</TD></TR></TABLE>>];
+    "filter_log" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">filter_log</TD></TR><TR><TD align="left">expr_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">hit_date</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+    "files" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">files</TD></TR><TR><TD align="left">mail_id</TD><TD align="right">integer</TD></TR><TR><TD align="left">filename</TD><TD align="right">character varying(300)</TD></TR></TABLE>>];
+    "config" [fontname="Helvetica" color="violetred4" peripheries="1"  fontsize="10" label=<<TABLE BORDER="0" bgcolor="grey80"><TR><TD COLSPAN="2" bgcolor="grey52">config</TD></TR><TR><TD align="left">conf_key</TD><TD align="right">character varying(100)</TD></TR><TR><TD align="left">value</TD><TD align="right">text</TD></TR><TR><TD align="left">conf_name</TD><TD align="right">character varying(100)</TD></TR><TR><TD align="left">date_update</TD><TD align="right">timestamp with time zone</TD></TR></TABLE>>];
+  }
+
+
+
+  "attachment_contents" -> "attachments" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="attachment_contents_attachment_id_fkey\nattachment_id = attachment_id"]
+
+
+  "attachments" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="attachments_mail_id_fkey\nmail_id = mail_id"]
+
+
+  "body" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="body_mail_id_fkey\nmail_id = mail_id"]
+
+
+
+
+
+
+  "filter_action" -> "filter_expr" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="filter_action_expr_id_fkey\nexpr_id = expr_id"]
+
+
+
+
+
+
+
+
+
+
+  "header" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="header_mail_id_fkey\nmail_id = mail_id"]
+
+
+
+
+
+
+
+
+  "inverted_word_index" -> "words" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="inverted_word_index_word_id_fkey\nword_id = word_id"]
+
+
+
+
+  "mail" -> "identities" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mail_identity_id_fkey\nidentity_id = identity_id"]
+
+
+  "mail_addresses" -> "addresses" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mail_addresses_addr_id_fkey\naddr_id = addr_id"]
+  "mail_addresses" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mail_addresses_mail_id_fkey\nmail_id = mail_id"]
+
+
+
+
+  "mail_tags" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mail_tags_mail_id_fkey\nmail_id = mail_id"]
+  "mail_tags" -> "tags" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mail_tags_tag_fkey\ntag = tag_id"]
+
+
+
+
+  "mailing_data" -> "mailing_definition" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mailing_data_mailing_id_fkey\nmailing_id = mailing_id"]
+
+
+
+
+  "mailing_run" -> "mailing_definition" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="mailing_run_mailing_id_fkey\nmailing_id = mailing_id"]
+
+
+
+
+
+
+  "notes" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="notes_mail_id_fkey\nmail_id = mail_id"]
+
+
+
+
+  "raw_mail" -> "mail" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="raw_mail_mail_id_fkey\nmail_id = mail_id"]
+
+
+
+
+  "tags" -> "tags" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="parent_tag_fk\nparent_id = tag_id"]
+
+
+  "tags_words" -> "tags" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="tags_words_tag_id_fkey\ntag_id = tag_id"]
+  "tags_words" -> "words" [color="blue" fontsize="6" labelcolor="blue" fontcolor="blue" arrowhead="normal"   label="tags_words_word_id_fkey\nword_id = word_id"]
+
+
+
+
+
+
+
+}

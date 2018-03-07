@@ -1,0 +1,49 @@
+Connected to manitou
+Describe tables
+16401::addresses  columns::11  addresses_pkey::PRIMARY KEY (addr_id)  foreignKeys::0
+16409::attachment_contents  columns::3  NoPrimaryKey  foreignKeys::1
+16415::attachments  columns::7  attachments_pkey::PRIMARY KEY (attachment_id)  foreignKeys::1
+16421::body  columns::3  NoPrimaryKey  foreignKeys::1
+16427::config  columns::4  NoPrimaryKey  foreignKeys::0
+16433::files  columns::2  NoPrimaryKey  foreignKeys::0
+16436::filter_action  columns::4  NoPrimaryKey  foreignKeys::1
+16442::filter_expr  columns::8  filter_expr_pkey::PRIMARY KEY (expr_id)  foreignKeys::0
+16450::filter_log  columns::3  NoPrimaryKey  foreignKeys::0
+16454::forward_addresses  columns::2  NoPrimaryKey  foreignKeys::0
+16460::global_notepad  columns::2  NoPrimaryKey  foreignKeys::0
+16466::header  columns::2  NoPrimaryKey  foreignKeys::1
+16474::identities  columns::5  identities_pkey::PRIMARY KEY (identity_id)  foreignKeys::0
+16481::import_mbox  columns::8  import_mbox_pkey::PRIMARY KEY (import_id)  foreignKeys::0
+16489::import_message  columns::5  NoPrimaryKey  foreignKeys::0
+16495::inverted_word_index  columns::4  NoPrimaryKey  foreignKeys::1
+16502::jobs_queue  columns::5  NoPrimaryKey  foreignKeys::0
+16510::mail  columns::17  NoPrimaryKey  foreignKeys::1
+16519::mail_addresses  columns::4  NoPrimaryKey  foreignKeys::2
+16522::mail_status  columns::2  NoPrimaryKey  foreignKeys::0
+16525::mail_tags  columns::4  NoPrimaryKey  foreignKeys::2
+16529::mail_template  columns::6  mail_template_pkey::PRIMARY KEY (template_id)  foreignKeys::0
+16538::mailing_data  columns::5  mailing_data_pkey::PRIMARY KEY (mailing_data_id)  foreignKeys::1
+16546::mailing_definition  columns::9  mailing_definition_pkey::PRIMARY KEY (mailing_id)  foreignKeys::0
+16555::mailing_run  columns::6  NoPrimaryKey  foreignKeys::1
+16558::mime_types  columns::2  NoPrimaryKey  foreignKeys::0
+16561::non_indexable_words  columns::1  NoPrimaryKey  foreignKeys::0
+16564::notes  columns::3  NoPrimaryKey  foreignKeys::1
+16571::programs  columns::3  NoPrimaryKey  foreignKeys::0
+16577::raw_mail  columns::2  NoPrimaryKey  foreignKeys::1
+16580::runtime_info  columns::2  NoPrimaryKey  foreignKeys::0
+16600::tags  columns::3  NoPrimaryKey  foreignKeys::1
+16603::tags_words  columns::3  NoPrimaryKey  foreignKeys::2
+16606::user_queries  columns::2  NoPrimaryKey  foreignKeys::0
+16612::users  columns::7  users_pkey::PRIMARY KEY (user_id)  foreignKeys::0
+16619::words  columns::2  words_pkey::PRIMARY KEY (word_id)  foreignKeys::0
+Build Hidden Skel
+Build Clusters
+    Build cluster Manitou
+        21 tables
+    Build cluster Technique
+        15 tables
+Generate Clusters and Tables DOT
+    Generate cluster Manitou
+Bypass addresses::email_addr Bypass addresses::name Bypass addresses::nickname Bypass addresses::last_sent_to Bypass addresses::last_recv_from Bypass addresses::notes Bypass addresses::invalid Bypass addresses::recv_pri Bypass addresses::nb_sent_to Bypass addresses::nb_recv_from Bypass attachment_contents::content Bypass attachment_contents::fingerprint Bypass attachments::content_type Bypass attachments::content_size Bypass attachments::filename Bypass attachments::charset Bypass attachments::mime_content_id Bypass body::bodytext Bypass body::bodyhtml Bypass filter_action::action_order Bypass filter_action::action_arg Bypass filter_action::action_type Bypass filter_expr::name Bypass filter_expr::user_lastmod Bypass filter_expr::last_update Bypass filter_expr::expression Bypass filter_expr::direction Bypass filter_expr::apply_order Bypass filter_expr::last_hit Bypass header::lines Bypass identities::email_addr Bypass identities::username Bypass identities::xface Bypass identities::signature Bypass import_mbox::tag_id Bypass import_mbox::mail_status Bypass import_mbox::apply_filters Bypass import_mbox::completion Bypass import_mbox::status Bypass import_mbox::filename Bypass import_mbox::auto_purge Bypass inverted_word_index::part_no Bypass inverted_word_index::mailvec Bypass inverted_word_index::nz_offset Bypass mail::mail_id Bypass mail::sender Bypass mail::recipients Bypass mail::sender_fullname Bypass mail::subject Bypass mail::msg_date Bypass mail::sender_date Bypass mail::status Bypass mail::mod_user_id Bypass mail::thread_id Bypass mail::message_id Bypass mail::in_reply_to Bypass mail::date_processed Bypass mail::priority Bypass mail::flags Bypass mail::raw_size Bypass mail_addresses::addr_type Bypass mail_addresses::addr_pos Bypass mail_tags::agent Bypass mail_tags::date_insert Bypass mailing_data::recipient_email Bypass mailing_data::csv_data Bypass mailing_data::sent Bypass mailing_definition::title Bypass mailing_definition::sender_email Bypass mailing_definition::creation_date Bypass mailing_definition::end_date Bypass mailing_definition::text_template Bypass mailing_definition::html_template Bypass mailing_definition::header_template Bypass mailing_definition::csv_columns Bypass mailing_run::status Bypass mailing_run::throughput Bypass mailing_run::nb_total Bypass mailing_run::nb_sent Bypass mailing_run::last_sent Bypass notes::note Bypass notes::last_changed Bypass raw_mail::mail_text Bypass tags::tag_id Bypass tags::name Bypass tags_words::counter Bypass words::wordtext     Generate cluster Technique
+Bypass users::fullname Bypass users::login Bypass users::email Bypass users::custom_field1 Bypass users::custom_field2 Bypass users::custom_field3 Bypass user_queries::title Bypass user_queries::sql_stmt Bypass runtime_info::rt_key Bypass runtime_info::rt_value Bypass programs::program_name Bypass programs::content_type Bypass programs::conf_name Bypass non_indexable_words::wordtext Bypass mime_types::suffix Bypass mime_types::mime_type Bypass mail_template::title Bypass mail_template::body_text Bypass mail_template::body_html Bypass mail_template::header Bypass mail_template::creation_date Bypass mail_status::mail_id Bypass mail_status::status Bypass jobs_queue::job_id Bypass jobs_queue::mail_id Bypass jobs_queue::job_type Bypass jobs_queue::job_args Bypass jobs_queue::status Bypass import_message::import_id Bypass import_message::mail_number Bypass import_message::encoded_mail Bypass import_message::status Bypass import_message::mail_id Bypass global_notepad::contents Bypass global_notepad::last_modified Bypass forward_addresses::to_email_addr Bypass forward_addresses::forward_to Bypass filter_log::expr_id Bypass filter_log::mail_id Bypass filter_log::hit_date Bypass files::mail_id Bypass files::filename Bypass config::conf_key Bypass config::value Bypass config::conf_name Bypass config::date_update     Generate relations 
+/usr/local/bin/dot -Tpdf -oonly-pk-fk/manitou-only-pkfk.pdf only-pk-fk/manitou-only-pkfk.dot
