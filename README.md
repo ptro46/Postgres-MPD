@@ -44,7 +44,53 @@ Dans l'Example nous en trouvons deux
 Dans votre répertoire recopier un des deux fichiers de configuration (all/manitou-all.config ou only-pk-fk/manitou-only-pkfk.config)
 
 #### Voici un exemple d'installation.
+
 ![Exemple d'installation](imgs/installation.png)
+
+### fichier de configuration de l'extraction
+
+Vous pouvez nommer ce fichier comme vous voulez, le placer dans le répertoire créé dans l'étape précédente et l'éditer pour le modifier.
+
+#### Entrée "outputConfig"
+
+```
+	"outputConfig" : {
+		"outputName" : "manitou-all",
+		"dotOutputFormat" : "pdf",
+		"dotBinary" : "/usr/local/bin/dot",
+		"includePrimaryKeys" : true,
+		"includeForeignKeys" : true,
+		"includeDataColumns" : true
+	}
+```
+
+#### Entrée "clusters"
+
+```
+	"clusters":[ {
+			"name" : "Manitou",
+			"background" : "bisque3",
+			"show" : true,
+			"content" : ["addresses","attachment_contents","attachments","body","filter_action","filter_expr","header","identities","import_mbox","inverted_word_index","mail","mail_addresses","mail_tags","mailing_data","mailing_definition","mailing_run","notes","raw_mail","tags","tags_words","words"]
+		} , {
+			"name" : "Technique",
+			"background" : "cyan3",
+			"show" : true,
+			"content" : ["users","user_queries","runtime_info","programs","non_indexable_words","mime_types","mail_template","mail_status","jobs_queue","import_message","global_notepad","forward_addresses","filter_log","files","config"]
+		} 
+	]
+```
+
+#### Entrée "hidden"
+
+```
+	"hidden":[
+		{
+			"tableName" : "foo",
+			"columns": ["col1"]
+		}
+	]
+```
 
 ## Utilisation
 
