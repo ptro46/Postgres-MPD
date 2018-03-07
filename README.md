@@ -26,6 +26,25 @@ La compilation va se faire dans le répertoire ou vous allez cloner le projet, p
 
 Il suffit de copier le binaire dans le répertoire Postgres-MPD/Example/Manitou/
 
+## Configuration
+
+Il est nécessaire de configurer au moins deux fichiers, la syntaxe des fichiers de configuration est du JSON. Deux exemples sont fournis dans le répertoire Example, respecter l'architecture des répertoires.
+
+### fichier postgres-mpd.config
+
+Ce fichier décrit comment se connecter à la base de donnnées PostgreSQL, on y retrouve les informations classiques de connection à toute base PostgreSQL.
+
+### Créer un répertoire de génération
+
+Dans l'Example nous en trouvons deux
+
+   -   all, dans lequel on va trouver un exemple de configuration pour générer le graphique de toutes les tables en incluant toutes les colonnes de chaque table.
+   -   only-pk-fk, dans lequel on va trouver un exemple de configuration pour générer le graphique de toutes les tables en incluant que les colonnes de type primary et foreign key.
+
+Dans votre répertoire recopier un des deux fichiers de configuration (all/manitou-all.config ou only-pk-fk/manitou-only-pkfk.config)
+
+![Exemple d'installation](imgs/installation.png)
+
 ## Utilisation
 
 Extract and draw tables relations graph from existing Postgres database 
