@@ -43,6 +43,7 @@ Dans l'Example nous en trouvons deux
 
 Dans votre répertoire recopier un des deux fichiers de configuration (all/manitou-all.config ou only-pk-fk/manitou-only-pkfk.config)
 
+####voici un exemple d'installation.
 ![Exemple d'installation](imgs/installation.png)
 
 ## Utilisation
