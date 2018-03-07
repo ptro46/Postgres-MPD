@@ -124,6 +124,7 @@ Pour chaque table il va etre possible de masquer un ensemble de colonnes, pour c
 
 ### Résultats une fois l'exécution terminée
 
+[embed]https://github.com/ptro46/Postgres-MPD/blob/master/Example/Manitou/all/manitou-all.pdf[/embed]
 ![Exemple d'exécution](imgs/execution.png)
 
 ## Exemple avec la base de Matitou
