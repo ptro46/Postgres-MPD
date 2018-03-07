@@ -99,7 +99,6 @@ Dans ce tableau il est possible de lister autant de "clusters" souhaité, un clu
 #### Entrée "hidden"
 
 
-
 ```
 	"hidden":[
 		{
@@ -108,6 +107,11 @@ Dans ce tableau il est possible de lister autant de "clusters" souhaité, un clu
 		}
 	]
 ```
+
+Pour chaque table il va etre possible de masquer un ensemble de colonnes, pour cela indiquer le nom de la table et la liste des colonnes masquées.
+
+   -   ***tableName*** nom de la table
+   -   ***columns*** tableau des colonnes masquées
 
 ## Utilisation
 
