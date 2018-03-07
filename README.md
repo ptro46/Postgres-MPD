@@ -65,7 +65,7 @@ Vous pouvez nommer ce fichier comme vous voulez, le placer dans le répertoire c
 ```
 
    -   ***outputName*** nom utilisé pour générer les fichiers (dot, pdf, ...)
-   -   ***dotOutputFormat*** format utilisé par la transformation graphviz/dot, [*https://www.graphviz.org/doc/info/output.html*](list des formats supportés)
+   -   ***dotOutputFormat*** format utilisé par la transformation graphviz/dot, [*https://www.graphviz.org/doc/info/output.html*](liste des formats supportés)
    -   ***dotBinary*** Chemin vers le binaire dot de Graphviz
    -   ***includePrimaryKeys*** true pour inclure les primary key lors de la génération
    -   ***includeForeignKeys*** true pour inclure les foreign key lors de la génération
@@ -89,7 +89,16 @@ Vous pouvez nommer ce fichier comme vous voulez, le placer dans le répertoire c
 	]
 ```
 
+Dans ce tableau il est possible de lister autant de "clusters" souhaité, un cluster est un moyen de rassembler des tables qui apparaitront dans un meme rectangle, il a un nom et une couleur de fond. Il est possible d'indiquer si il est visible ou masqué, un cluster masqué ses tables n'apparaitront pas dans la sortie. Dans le tableau "content" on indique la liste des tables qui font parties du cluster.
+
+   -   ***name*** nom du cluster
+   -   ***background*** couleur de fond du cluster [*https://www.graphviz.org/doc/info/colors.html*](liste des couleurs supportés)
+   -   ***show*** true pour afficher le cluster et ses tables
+   -   ***content*** listes des tables contenues dans le cluster
+
 #### Entrée "hidden"
+
+
 
 ```
 	"hidden":[
