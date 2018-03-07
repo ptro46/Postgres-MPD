@@ -124,13 +124,12 @@ Pour chaque table il va etre possible de masquer un ensemble de colonnes, pour c
 
 ### Résultats une fois l'exécution terminée
 
-[embed]https://github.com/ptro46/Postgres-MPD/blob/master/Example/Manitou/all/manitou-all.pdf[/embed]
 ![Exemple d'exécution](imgs/execution.png)
 
 ## Exemple avec la base de Matitou
 
 Comme exemple les fichiers de configuration pour Manitou-Mail sont disponibles. [*http://www.manitou-mail.org*](http://www.manitou-mail.org)
 ### PDF des tables avec toutes les colonnes
-![Toutes les colonnes](Example/Manitou/all/manitou-all.pdf)
+[Toutes les colonnes](https://github.com/ptro46/Postgres-MPD/blob/master/Example/Manitou/all/manitou-all.pdf)
 ### PDF des tables avec uniquement les primary et foreign key
-![Uniquement les primary et foreign key](Example/Manitou/only-pk-fk/manitou-only-pkfk.pdf)
+[Uniquement les primary et foreign key](Example/Manitou/only-pk-fk/manitou-only-pkfk.pdf)
